@@ -68,3 +68,11 @@ function sqrt() {
     display.value = Math.sqrt(+display.value)
 
 }
+document.querySelectorAll('.ln').forEach(el=>el.addEventListener('click', ln))
+
+function ln() {
+    const display = document.querySelector('.display')
+    display.value = Math.log(+display.value)
+
+}
+
