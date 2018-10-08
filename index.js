@@ -16,7 +16,6 @@ function result() {
 
             let myDisp = str.split("+")
             let result = +myDisp[0] + (+myDisp[1])
-            // let str_res=str.splice(0, 2, +myDisp[0]+(+myDisp[1]))
             display.value = result
         } else if (str[i] === "-") {
 
@@ -65,7 +64,11 @@ document.querySelectorAll('.sqrt').forEach(el=>el.addEventListener('click', sqrt
 
 function sqrt() {
     const display = document.querySelector('.display')
-    display.value = Math.sqrt(+display.value)
+    if ((+display.value)<0){
+        let result = 'Не можна так'
+        display.value = result
+    } else {
+    display.value = Math.sqrt(+display.value)}
 
 }
 document.querySelectorAll('.ln').forEach(el=>el.addEventListener('click', ln))
