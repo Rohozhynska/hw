@@ -78,4 +78,18 @@ function ln() {
     display.value = Math.log(+display.value)
 
 }
+document.querySelectorAll('.sin').forEach(el=>el.addEventListener('click', sin))
+
+function sin() {
+    const display = document.querySelector('.display')
+    display.value = Math.sin(+display.value)
+
+}
+document.querySelectorAll('.cos').forEach(el=>el.addEventListener('click', cos))
+
+function cos() {
+    const display = document.querySelector('.display')
+    display.value = Math.cos(+display.value)
+
+}
 
