@@ -75,8 +75,11 @@ document.querySelectorAll('.ln').forEach(el=>el.addEventListener('click', ln))
 
 function ln() {
     const display = document.querySelector('.display')
-    display.value = Math.log(+display.value)
-
+    if ((+display.value)<0){
+        let result = 'Не можна так'
+        display.value = result
+    } else {
+    display.value = Math.log(+display.value)}
 }
 document.querySelectorAll('.sin').forEach(el=>el.addEventListener('click', sin))
 
